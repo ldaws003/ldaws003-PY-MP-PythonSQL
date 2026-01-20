@@ -1,0 +1,25 @@
+{
+  "type": "python",
+  "testFiles": [
+    {
+      "path": "src/test/lab_test.py",
+      "testCases": [
+        {
+          "methodName": "test_connect_to_database",
+          "label": "Verify database connection is established",
+          "description": "Ensures that lab.conn is an active sqlite3.Connection instance."
+        },
+        {
+          "methodName": "test_create_dogs_table",
+          "label": "Verify dogs table is created",
+          "description": "Calls create_dogs_table and checks that the SQLite database contains a table named 'dogs'."
+        },
+        {
+          "methodName": "test_insert_and_select_dog",
+          "label": "Verify inserting and selecting dog records",
+          "description": "Inserts a dog into the dogs table and verifies that retrieval returns the correct row with expected values."
+        }
+      ]
+    }
+  ]
+}
