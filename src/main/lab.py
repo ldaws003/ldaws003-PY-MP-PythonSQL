@@ -8,6 +8,8 @@ import sqlite3
 conn = sqlite3.connect(":memory")
 cursor = conn.cursor()
 
+cursor.execute("DROP TABLE dogs").commit()
+cursor.execute("DROP TABLE dog").commit()
 
 # Create a dogs table with autoincrementing ID
 def create_dogs_table():
