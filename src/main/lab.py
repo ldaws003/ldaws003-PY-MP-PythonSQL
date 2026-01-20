@@ -10,10 +10,6 @@ cursor = conn.cursor()
 
 # Create a dogs table with autoincrementing ID
 def create_dogs_table():
-    cursor.execute("DROP TABLE dogs")
-    conn.commit()
-    cursor.execute("DROP TABLE dog")
-    conn.commit()
 
     cursor.execute("CREATE TABLE dogs(id SERIAL PRIMARY KEY, name TEXT, breed TEXT, age INT)")
     conn.commit()
