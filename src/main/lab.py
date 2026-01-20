@@ -11,7 +11,7 @@ cursor = conn.cursor()
 # Create a dogs table with autoincrementing ID
 def create_dogs_table():
 
-    cursor.execute("CREATE TABLE dogs(id int SERIAL PRIMARY KEY, name TEXT, breed TEXT, age INT)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS dogs(id int SERIAL PRIMARY KEY, name TEXT, breed TEXT, age INT)")
     conn.commit()
 
 
