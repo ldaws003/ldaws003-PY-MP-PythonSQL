@@ -5,7 +5,7 @@ as well as creating a table, inserting data, and selecting that data.
 import sqlite3
 
 
-conn = sqlite3.connect(":memory")
+conn = sqlite3.connect("db_file")
 cursor = conn.cursor()
 
 # Create a dogs table with autoincrementing ID
