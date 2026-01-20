@@ -13,7 +13,7 @@ cursor = conn.cursor()
 def create_dogs_table():
 
     cursor.execute("""CREATE TABLE dog(
-    PRIMARY KEY id SERIAL,
+    id SERIAL PRIMARY KEY,
     name TEXT,
     breed TEXT,
     age INT)""")
