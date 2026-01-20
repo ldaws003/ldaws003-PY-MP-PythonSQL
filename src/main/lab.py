@@ -18,7 +18,7 @@ def create_dogs_table():
 # TODO: Complete insert_dog() by inserting a new dog (provided in the parameters) into the "dogs" table.
 def insert_dog(name, breed, age):
 
-    cursor.execute(f'INSERT INTO dogs (name, breed, age) VALUES ({name}, {breed}, {age})')
+    cursor.execute(f"INSERT INTO dogs (name, breed, age) VALUES ('{name}', '{breed}', {age})")
     conn.commit()
 
 
