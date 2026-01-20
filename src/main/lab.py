@@ -5,7 +5,7 @@ as well as creating a table, inserting data, and selecting that data.
 import sqlite3
 
 
-conn = sqlite3.connection(":memory")
+conn = sqlite3.connect(":memory")
 cursor = conn.cursor()
 
 
@@ -29,7 +29,6 @@ def insert_dog(name, breed, age):
 
 # TODO: Complete select_all_dogs() by selecting all rows from the "dogs" table *and returning them*.
 def select_all_dogs():
-
     # return the rows
     cursor.execute("SELECT * FROM dog")
     return cursor.fetchall()
